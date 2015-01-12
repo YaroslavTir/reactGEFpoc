@@ -80,7 +80,6 @@ var DatetimeSelector = React.createClass({
             out += this.state.datetime;
             console.log(out);
             this.validate();
-            pr
         }
     },
     validate: function () {
