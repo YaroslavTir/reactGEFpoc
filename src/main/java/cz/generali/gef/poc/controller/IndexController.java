@@ -21,10 +21,10 @@ public class IndexController {
 	private static final String MODEL_VIEW = "model";
 
 	@Autowired
-	PartnerService partnerService;
+	private PartnerService partnerService;
 
 	@Autowired
-	PartnerRepository partnerRepository;
+	private PartnerRepository partnerRepository;
 
 	@RequestMapping(value = { "/new" })
 	public ModelAndView create() {

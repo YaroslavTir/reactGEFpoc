@@ -20,9 +20,9 @@ import java.util.Map;
 public class PartnerService {
 
 	@Autowired
-	PartnerRepository partnerRepository;
+	private PartnerRepository partnerRepository;
 
-	ObjectMapper mapper = new ObjectMapper();
+	private ObjectMapper mapper = new ObjectMapper();
 
 	public String getPartner(Long id, Boolean editable) throws JsonProcessingException {
 		if (id != null) {
