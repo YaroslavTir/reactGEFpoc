@@ -74,7 +74,7 @@ var Table = React.createClass({
             tableRows.push(<TableRow columnNames={Object.keys(this.props.headers)} rowId={this.props.rowIdProperty} data={tableData[i]} actions={this.props.actions}/>);
         }
 
-        var tableHeader = <TableHeader columns={this.props.headers} actions={this.props.actions !== undefined}/>
+        var tableHeader = <TableHeader columns={this.props.headers} actions={this.props.actions !== undefined}/>;
 
         return (<BTable stripped bordered hover id={this.props.id}>
         {tableHeader}

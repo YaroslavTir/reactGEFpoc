@@ -9,6 +9,7 @@ var jQuery = require('jquery');
 var moment = require('moment');
 var AppDispatcher = require('../lib/AppDispatcher');
 var AppStore = require('../store/ApplicationStore');
+var ReadInput = require('../components/ReadInput.jsx');
 require("../external/datetimepicker/jquery.datetimepicker.css");
 
 
@@ -100,8 +101,7 @@ var DatetimeSelector = React.createClass({
         return (this.state.editable ? <div>
             <label htmlFor={this.props.id}>{this.props.label}</label>
             <input ref="datetimefield" name={this.props.id} value={this.formatDatetime(this.state.datetime)} readOnly/>
-        </div> : <div>
-            <label>{this.props.label}:</label>{this.state.value}</div>);
+        </div> : <ReadInput label={this.props.label} value={this.state.value}/>);
     }
 });
 

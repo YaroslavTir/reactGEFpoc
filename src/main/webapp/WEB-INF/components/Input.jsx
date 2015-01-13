@@ -4,6 +4,7 @@ var BInput = require("react-bootstrap/Input");
 var React = require('react');
 var AppStore = require('../store/ApplicationStore');
 var AppDispatcher = require('../lib/AppDispatcher');
+var ReadInput = require('../components/ReadInput.jsx');
 require("../css/components/Input/input.css");
 
 var Input = React.createClass({
@@ -87,8 +88,7 @@ var Input = React.createClass({
                         onChange={this.handleChange} />
                 );
             } else {
-                return (<div>
-                    <label>{this.props.label}:</label>{this.state.value}</div>);
+                return (<ReadInput label={this.props.label} value={this.state.value}/>);
             }
 
         }
