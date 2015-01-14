@@ -57,7 +57,9 @@ jsp generated (replaced with placeholder *view.jsp* contains):
 ```
 This ensures that when a user enters a page, it will be available with its own logic and styles. What is a page view, and where it has generated (target html element) is defined in each file in the folder .jsx views. JSX files in the folder views does not export *CommonJS* module but immediately call her to render the page DOM.
 
-So for example *Partner.jsx* is defined at the end of the file that is to render the element app in html (JSP) page. In *Partner.jsx* itself is also dependent on *Layout.jsx* that defines common features of application views. React views in the application should contain a minimum logic. The logic should be encapsulated in the individual nested components which are also responsible for cooperating with application javascript Store and application javacript Model.
+So for example *Partner.jsx* is defined at the end of the file that is to render the element app in html (JSP) page. In *Partner.jsx* itself is also dependent on *Layout.jsx* that defines common features of application views. React views in the application should contain a minimum logic. The logic should be encapsulated in the individual nested components which are also responsible for cooperating with application javascript Store and application javacript Model. The unidirectional dataflow is provided by Flux application architecture (see image below)
+
+![Flux](http://facebook.github.io/flux/img/flux-simple-f8-diagram-with-client-action-1300w.png)
 
 **Store** is responsible for keeping the current model of the application. The model should not be treated in any other way than through the Store.
 **Model** acts as a "single source of truth" - what is the model that "goes" on a server. The application itself is also initialized according to the Model. Data models in POC are created for each page and passed through controller call, which serializes the required data into JSON and then "prints" them through the JSP page. The result then looks for example like snippet below:
