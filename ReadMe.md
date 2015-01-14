@@ -60,3 +60,6 @@ Application dependencies
 -	[Bootstrap](http://getbootstrap.com/) - just some parts of css are used in application
 -   [Moment.js](http://momentjs.com/) - javascript datetime manipulation
 -   [Promises.js](https://www.promisejs.org/) - asynchronous callbacks wrapper
+
+
+##For more information read [Description.md](https://github.com/octopuss/reactGEFpoc/blob/master/Description.md)
