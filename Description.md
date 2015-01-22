@@ -31,7 +31,7 @@ In this section of configuration also some CSS Preprocessor can be added, perhap
     filename: "[name] .js" // how to name files javascipt files
 ```
 *[name]* is a reference to the entrypoint, and in the case CSS file the same name as the module but with the extension ".css"
-It is good practice to have Webpack permanently watching the project directory with the command "*webpack --debug --watch*". It catches save of project files and regenerates distribution javascript content and resources from into the output folder from the configuration. There is also a maven task that runs Webpack automatically before build (see *ReadMe.md*).
+It is good practice to have Webpack permanently watching the project directory with the command "*webpack --debug --watch*". It catches save of project files and regenerates distribution javascript content and resources from into the output folder from the configuration. There is also a maven profile "exec-webpack" that runs Webpack automatically before build (see *ReadMe.md*).
 WebPack configuration file also can be also run according to different profiles from commandline - for example, adding "*webpack --debug -watch --p*" *p* at the end. This parameter triggers plugin which uglify / minify and the resulting files are generated minified and uglified for production use.
 
 Web layer

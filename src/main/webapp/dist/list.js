@@ -8,9 +8,9 @@ webpackJsonp([1],{
 	var Layout = __webpack_require__(2);
 	var Table = __webpack_require__(3);
 	var AppStore = __webpack_require__(1);
-	var Button = __webpack_require__(8);
+	var Button = __webpack_require__(7);
 
-	var React = __webpack_require__(7);
+	var React = __webpack_require__(10);
 
 
 	var List = React.createClass({
@@ -46,10 +46,10 @@ webpackJsonp([1],{
 
 	/** @jsx React.DOM */
 	'use strict';
-	var BTable = __webpack_require__(19);
-	var React = __webpack_require__(7);
-	var Button = __webpack_require__(8);
-	__webpack_require__(26);
+	var BTable = __webpack_require__(12);
+	var React = __webpack_require__(10);
+	var Button = __webpack_require__(7);
+	__webpack_require__(30);
 
 	var TableRow = React.createClass({displayName: "TableRow",
 	    // columns, data
@@ -132,12 +132,12 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 19:
+/***/ 12:
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(7);
-	var joinClasses = __webpack_require__(39);
-	var classSet = __webpack_require__(40);
+	var React = __webpack_require__(10);
+	var joinClasses = __webpack_require__(34);
+	var classSet = __webpack_require__(35);
 
 	var Table = React.createClass({displayName: 'Table',
 	  propTypes: {
@@ -174,7 +174,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 26:
-22
+/***/ 30:
+27
 
 });

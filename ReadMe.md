@@ -40,7 +40,8 @@ This will download all neccessery Node.js dependencies for this project. Definit
 
 For running Java application please use command
 
-    mvn clean exec:exec spring-boot:run
+    mvn clean compile spring-boot:run -P exec-webpack
+
 
 Web application should start on [http://localhost:8080](http://localhost:8080)
 
