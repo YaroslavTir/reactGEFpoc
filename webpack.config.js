@@ -25,10 +25,15 @@ var createEntryPoints = function (dir) {
 };
 
 module.exports = {
-    entry: createEntryPoints('./src/main/webapp/WEB-INF/views'), // function that creates entrypoints object like index : '.../index.jsx' from files found in provided folder
+    entry: createEntryPoints('./src/views'), // function that creates entrypoints object like index : '.../index.jsx' from files found in provided folder
     module: {
         loaders: [ // each filetype can be processed using diferent file loader
-            {test: /\.jsx$/, loader: 'jsx-loader'}, // convert JSX files into Js files
+            {
+                test: /\.((jsx)|(js))$/,
+                loader: 'babel-loader',
+                query: {experimental: true, sourceMap: true, sourceFileName: '[name]\.[ext]\.map'},
+                exclude: /node_modules/
+            }, // convert JSX files into Js files
             {test: /\.css$/, loader: ExtractTextPlugin.extract('css-loader')}, // extrats css files from require(..) directives
             {test: /\.((svg)|(woff)|(woff)|(ttf)|(eot))$/, loader: 'file-loader', query: {name: '[name]\.[ext]'}} // extracts fonts from css files and adds them to distribution folder
         ]
@@ -37,7 +42,7 @@ module.exports = {
         modulesDirectories: ["node_modules", "components"] // explicitly define where to look for node modules (if not defined webpack uses some defaults)
     },
     output: {
-        path: "./src/main/webapp/dist", // where to put files after processing
+        path: "./dist", // where to put files after processing
         filename: "[name].js" // how to name javascript files
     },
     plugins: plugins
